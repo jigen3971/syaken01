@@ -172,8 +172,9 @@ button:hover{
   }
 
   .tax-btn {
-    padding: 8px 2px;
-    font-size: 11px;
+    padding: 8px 1px;
+    font-size: 10px;
+    white-space: nowrap;
   }
 
   h1 {
