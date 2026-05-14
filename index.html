@@ -33,7 +33,6 @@
     <label>重量税</label>
     <input type="number" id="weightTax" placeholder="下の早見表から選んで入力">
 
-    <button onclick="calculate()">計算する</button>
     <div class="weightTable">
   <h2>重量税早見表</h2>
 
@@ -71,6 +70,10 @@
       <p>自賠責：<span id="jibaiseki">0</span>円</p>
       <p>印紙代：<span id="inshi">0</span>円</p>
       <p>代行料：<span id="daikou">0</span>円</p>
+      <p>検査手数料：<span id="kensatesuResult">0</span>円</p>
+      <label>検査手数料</label>
+<input type="number" id="kensatesu" placeholder="必要時のみ入力">
+<button onclick="calculate()">計算する</button>
 
       <div class="result-box">
   <h3>合計金額</h3>

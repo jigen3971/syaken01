@@ -7,6 +7,7 @@ function calculate(){
   let jibaiseki = 0;
   let inshi = 2200;
   let daikou = 5000;
+  let kensatesu = Number(document.getElementById("kensatesu").value);
 
   // 軽自動車
   if(carType === "kei"){
@@ -97,7 +98,7 @@ function calculate(){
 
   }
 
-  const total = jibaiseki + inshi + daikou + weightTax;
+  const total = jibaiseki + inshi + daikou + kensatesu + weightTax;
 
   document.getElementById("jibaiseki").textContent =
     jibaiseki.toLocaleString();
@@ -107,6 +108,8 @@ function calculate(){
 
   document.getElementById("daikou").textContent =
     daikou.toLocaleString();
+  document.getElementById("kensatesu").textContent =
+    kensatesu.toLocaleString();
 
   document.getElementById("total").textContent =
   total.toLocaleString() + "円";
