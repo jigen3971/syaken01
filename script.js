@@ -7,7 +7,7 @@ function calculate(){
   let jibaiseki = 0;
   let inshi = 2200;
   let daikou = 5000;
-  let kensatesu = Number(document.getElementById("kensatesu").value);
+  let kensatesu = Number(document.getElementById("kensatesu").value || 0);
 
   // 軽自動車
   if(carType === "kei"){
