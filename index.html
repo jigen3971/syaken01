@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>車検諸経費計算</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>車検諸経費計算</h1>
+
+    <label>車種</label>
+    <select id="carType">
+      <option value="kei">軽自動車</option>
+      <option value="small">普通車 2000cc未満</option>
+      <option value="large">普通車 2000cc以上</option>
+      <option value="truckSmall">小型トラック</option>
+      <option value="truckLarge">大型トラック</option>
+    </select>
+
+    <label>自賠責期間</label>
+    <select id="jibaisekiPeriod">
+      <option value="24">24ヶ月</option>
+      <option value="25">25ヶ月</option>
+      <option value="12">12ヶ月</option>
+      <option value="13">13ヶ月</option>
+    </select>
+
+    <label>重量税</label>
+    <input type="number" id="weightTax" placeholder="下の早見表から選んで入力">
+
+    <button onclick="calculate()">計算する</button>
+    <div class="weightTable">
+  <h2>重量税早見表</h2>
+
+  <div class="taxGroup">
+  <p>軽自動車</p>
+
+  <div class="taxButtons">
+    <button class="tax-btn" data-tax="6600">6,600円</button>
+    <button class="tax-btn" data-tax="8800">8,800円</button>
+    <button class="tax-btn" data-tax="16400">16,400円</button>
+  </div>
+</div>
+
+<div class="taxGroup">
+  <p>普通車（13年未満）</p>
+
+  <div class="taxButtons">
+    <button class="tax-btn" data-tax="16400">16,400円</button>
+    <button class="tax-btn" data-tax="22800">22,800円</button>
+    <button class="tax-btn" data-tax="34200">34,200円</button>
+  </div>
+  <div class="taxGroup">
+  <p>13年超（普通車）</p>
+
+  <div class="taxButtons">
+    <button class="tax-btn" data-tax="22800">22,800円</button>
+    <button class="tax-btn" data-tax="25800">25,800円</button>
+    <button class="tax-btn" data-tax="37800">37,800円</button>
+  </div>
+</div>
+</div>
+</div>
+
+    <div class="result">
+      <p>自賠責：<span id="jibaiseki">0</span>円</p>
+      <p>印紙代：<span id="inshi">0</span>円</p>
+      <p>代行料：<span id="daikou">0</span>円</p>
+
+      <div class="result-box">
+  <h3>合計金額</h3>
+  <p id="total">0円</p>
+</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
